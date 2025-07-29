@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tela de PIN</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- Slideshow de fundo -->
+  <div class="bg-slideshow">
+    <img src="bg1.jpg" class="bg-img active" alt="Imagem de fundo 1">
+    <img src="bg2.jpg" class="bg-img" alt="Imagem de fundo 2">
+    <img src="bg3.jpg" class="bg-img" alt="Imagem de fundo 3">
+    <img src="bg4.jpg" class="bg-img" alt="Imagem de fundo 4">
+    <img src="bg5.jpg" class="bg-img" alt="Imagem de fundo 5">
+    <img src="bg6.jpg" class="bg-img" alt="Imagem de fundo 6">
+  </div>
+
+  <!-- Caixa do PIN -->
+  <div class="pin-box">
+    <h2>Bem-vindo</h2>
+    <p>Digite seu PIN</p>
+
+    <div class="input-container">
+      <input type="password" maxlength="4" id="pinInput" placeholder="••••" />
+      <i class="fas fa-eye" id="toggleSenha" style="display: none;"></i>
+    </div>
+
+    <button onclick="verificarPIN()">Entrar</button>
+
+    <p id="mensagemErro"></p>
+  </div>
+
+  <script>
+    function verificarPIN() {
+      const pinCorreto = "0000";
+      const input = document.getElementById("pinInput").value;
+      const mensagem = document.getElementById("mensagemErro");
+
+      if (input === pinCorreto) {
+        mensagem.textContent = "Acesso liberado!";
+        mensagem.style.color = "limegreen";
+      } else {
+        mensagem.textContent = "PIN incorreto. Tente novamente.";
+        mensagem.style.color = "red";
+      }
+    }
+
+    // Slideshow
+    window.onload = () => {
+      document.querySelector(".pin-box").classList.add("show");
+
+      let current = 0;
+      const slides = document.querySelectorAll(".bg-img");
+      setInterval(() => {
+        slides[current].classList.remove("active");
+        current = (current + 1) % slides.length;
+        slides[current].classList.add("active");
+      }, 5000);
+    };
+  </script>
+</body>
+</html>

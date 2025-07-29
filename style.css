@@ -1,0 +1,195 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+}
+
+/* Fundo com slideshow */
+.bg-slideshow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg-img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.bg-img.active {
+  opacity: 1;
+}
+
+/* Caixa PIN */
+.pin-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.9);
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 50px 70px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  text-align: center;
+  color: white;
+  opacity: 0;
+  transition: all 0.8s ease;
+  min-width: 320px;
+  max-width: 400px;
+}
+
+
+.pin-box.show {
+  opacity: 1;
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.pin-box h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.pin-box p {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+.pin-box input {
+  padding: 14px;
+  font-size: 24px;
+  width: 140px;
+  text-align: center;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  color: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.pin-box input::placeholder {
+  font-size: 14px;
+  letter-spacing: normal;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.pin-box button {
+  padding: 12px 30px;
+  font-size: 18px;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  display: block;
+  margin: 0 auto;
+}
+
+.pin-box button:hover {
+  background-color: rgba(255, 255, 255, 0.35);
+  transform: scale(1.05);
+}
+
+#mensagemErro {
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+#toggleSenha {
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  position: relative;
+  top: 2px;
+  user-select: none;
+  display: none;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 768px) {
+  .pin-box {
+    padding: 40px 50px;
+    min-width: 280px;
+    max-width: 90vw;
+  }
+  .pin-box input {
+    width: 120px;
+    font-size: 20px;
+  }
+  .pin-box h2 {
+    font-size: 28px;
+  }
+  .pin-box button {
+    font-size: 16px;
+    padding: 10px 26px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pin-box {
+    padding: 30px 30px;
+    min-width: unset;
+    max-width: 95vw;
+    border-radius: 15px;
+  }
+  .pin-box input {
+    width: 100px;
+    font-size: 18px;
+  }
+  .pin-box h2 {
+    font-size: 24px;
+  }
+  .pin-box button {
+    font-size: 14px;
+    padding: 10px 24px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .pin-box {
+    max-width: 420px;
+    padding: 50px 70px;
+  }
+  .pin-box h2 {
+    font-size: 36px;
+  }
+  .pin-box input {
+    width: 160px;
+    font-size: 28px;
+  }
+  .pin-box button {
+    font-size: 20px;
+    padding: 14px 38px;
+  }
+}
+
