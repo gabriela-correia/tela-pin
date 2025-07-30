@@ -1,31 +1,14 @@
-# 🔐 Projeto: Tela de PIN com Fundo Animado
+# 💡 Projeto: Tela de PIN com Fundo Animado
 
 Este projeto é uma **tela de autenticação por PIN** criada com **HTML, CSS e JavaScript**, que simula uma interface de login visualmente moderna. Desenvolvi essa tela como parte do meu processo de aprendizado, com o objetivo de testar meus conhecimentos e demonstrar o que venho estudando na prática.
 
----
-
-## 📱 O que tem na tela?
-
-A interface é composta por:
-
-- 🎞️ **Fundo com slideshow automático de imagens**, que troca suavemente a cada poucos segundos.
-- 🔐 **Campo de entrada de PIN**, com design minimalista e moderno, onde o usuário digita uma sequência de 4 dígitos.
-- 👁️ Ícone de "mostrar/ocultar" senha (preparado para implementação futura).
-- ✅ **Botão "Entrar"**, que verifica se o PIN digitado está correto (PIN padrão: `0000`).
-- ⚠️ **Mensagens visuais** que informam se o PIN está correto ou incorreto.
-- 💬 Estilo elegante com **efeito de vidro (glassmorphism)**, sombras suaves e responsividade para telas menores.
-
----
+--
 
 ## 🛠️ Tecnologias e ferramentas utilizadas
 
 - **HTML5** — estruturação da página.
-- **CSS3** — estilização completa, incluindo:
-  - Efeitos de *glassmorphism*
-  - Slideshow com transição suave
-  - Responsividade para dispositivos móveis
-- **JavaScript (puro)** — lógica da verificação de PIN e funcionamento do slideshow.
-- **Font Awesome** — ícones visuais (como o olho da senha).
+- **CSS3** — estilização completa, incluindo: Efeitos de glassmorphism, Slideshow com transição suave, Responsividade para dispositivos móveis
+- **JavaScript** — lógica da verificação de PIN e funcionamento do slideshow.
 - **Editor:** Visual Studio Code.
 
 ---
@@ -42,11 +25,6 @@ Criei essa tela como um exercício pessoal para:
 
 ---
 
-## 💡 Como testar o projeto
+✅ **Projeto simples, funcional e feito com foco em aprendizado.**
 
-1. Baixe ou clone este repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/tela-pin.git
-
-
-https://gabriela-correia.github.io/tela-pin/
+🔗 [Clique aqui para ver o projeto funcionando] https://gabriela-correia.github.io/tela-pin/
